@@ -5,94 +5,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     <style>
+        /* Global Styles */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Playfair Display', serif;
+            background-color: #fafafa;
             margin: 0;
             padding: 0;
+            color: #333;
         }
 
+        /* Container for email content */
         .container {
-            width: 100%;
             max-width: 600px;
             margin: 0 auto;
-            background-color: #fff;
-            border: 1px solid #e1e1e1;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             padding: 20px;
         }
 
+        /* Header Section */
         .header {
             text-align: center;
-            padding: 20px;
             background-color: #FFB6C1;
-            color: #fff;
+            color: white;
+            padding: 20px 0;
         }
 
         .header h1 {
             margin: 0;
             font-size: 36px;
+            font-family: 'Dancing Script', cursive;
+            letter-spacing: 2px;
         }
 
+        /* Content Section */
         .content {
             text-align: center;
-            padding: 30px;
+            padding: 20px;
         }
 
         .content h2 {
-            color: #333;
             font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .content p {
-            color: #666;
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .content .names {
-            font-size: 28px;
-            color: #FF1493;
+            margin-bottom: 15px;
+            color: #333;
+            font-family: 'Playfair Display', serif;
             font-weight: bold;
         }
 
+        .names {
+            font-family: 'Dancing Script', cursive;
+            font-size: 36px;
+            color: #FF1493;
+            margin: 10px 0;
+        }
+
+        /* Wedding details */
         .details {
-            text-align: left;
-            color: #555;
-            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px 0;
+            background-color: #f3f3f3;
+            border-radius: 6px;
         }
 
         .details p {
-            margin: 5px 0;
             font-size: 18px;
+            color: #666;
+            margin: 5px 0;
         }
 
+        /* Call & WhatsApp buttons */
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 10px 20px;
+            background-color: #FF1493;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #e0115f;
+        }
+
+        /* Footer Section */
         .footer {
             text-align: center;
-            padding: 20px;
+            padding: 15px 0;
             background-color: #FFB6C1;
-            color: #fff;
+            color: white;
+            margin-top: 20px;
         }
 
         .footer p {
             margin: 0;
         }
 
-        .rsvp-button {
-            background-color: #FF1493;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
-            margin-top: 20px;
-            display: inline-block;
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
-        .rsvp-button:hover {
-            background-color: #e0115f;
+        .content h2, .names, .content p {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .content h2 {
+                font-size: 20px;
+            }
+
+            .names {
+                font-size: 30px;
+            }
+
+            .details p {
+                font-size: 16px;
+            }
+
+            .button {
+                font-size: 16px;
+                padding: 8px 15px;
+            }
         }
     </style>
 </head>
@@ -113,25 +173,25 @@
                 <p>and</p>
                 <p>Samrat</p>
             </div>
-            <p>As they embark on their new journey together, we would love your presence to celebrate this beautiful occasion.</p>
+            <p>Please join us to celebrate the beautiful occasion of their wedding ceremony.</p>
         </div>
 
         <!-- Wedding Details -->
         <div class="details">
-            <p><strong>Date:</strong> 21st July 2025</p>
-            <p><strong>Time:</strong> 7:00 PM</p>
-            <p><strong>Venue:</strong> Sanyasi Lodge, Tulin, West Bengal</p>
+            <p><strong>Date:</strong> 15th December 2024</p>
+            <p><strong>Time:</strong> 6:00 PM</p>
+            <p><strong>Venue:</strong> Shree Sanyasi Lodge,Tulin, Puruliapus</p>
         </div>
 
-        <!-- RSVP Button -->
-        <div class="content">
-            <a href="mailto:rsvp@example.com" class="rsvp-button">RSVP Now</a>
+        <!-- Call & WhatsApp buttons -->
+        <div class="button-container">
+            <a href="tel:+919507038836" class="button">Call Us</a>
+            <a href="https://wa.me/9507038836" class="button">WhatsApp Us</a>
         </div>
 
         <!-- Footer Section -->
         <div class="footer">
-            <p>Looking forward to seeing you!</p>
-            <p>Best regards, <br>Prosun Ghosh and Family</p>
+            <p>With love, Prosun Ghosh & Family</p>
         </div>
     </div>
 
