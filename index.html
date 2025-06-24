@@ -207,17 +207,39 @@
 
 
 
-        <!-- Wedding Details -->
-<div class="details">
-    <p><strong>📅 Date:</strong> 20th & 21st July 2025</p>
 
-    <p><strong>🎶 20th July:</strong> Sangeet Night from 7:00 PM onwards</p>
+<!-- Wedding Details -->
+<div class="details" style="
+    background-color: #fdf0f5;
+    border-radius: 12px;
+    padding: 24px 20px;
+    margin: 30px auto;
+    max-width: 600px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    text-align: left;
+    line-height: 1.6;
+">
+    <h3 style="
+        font-family: 'Dancing Script', cursive;
+        color: #FF1493;
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 20px;
+    ">
+        You're Invited!
+    </h3>
 
-    <p><strong>💍 21st July:</strong> Marriage Ceremony from 6:30 PM onwards</p>
+    <p style="margin: 10px 0;"><strong>📅 Date:</strong> 20th & 21st July 2025</p>
 
-    <p><strong>🏨 Venue:</strong> Bhanumati Lodge</p>
+    <p style="margin: 10px 0;"><strong>🎶 20th July:</strong> Sangeet Night — <em>7:00 PM onwards</em></p>
 
-    <p><strong>📍 Address:</strong> Tulin, Uparpara, West Bengal 723212</p>
+    <p style="margin: 10px 0;"><strong>💍 21st July:</strong> Marriage Ceremony — <em>6:30 PM onwards</em></p>
+
+    <p style="margin: 14px 0 6px;"><strong>🏨 Venue:</strong> Bhanumati Lodge</p>
+
+    <p style="margin: 6px 0;"><strong>📍 Address:</strong> Tulin, Uparpara, West Bengal 723212</p>
 </div>
 
         <!-- Countdown Timer -->
@@ -294,6 +316,32 @@
     setInterval(changeImage, 4000); // Change image every 3 seconds
 </script>
 
+<!-- Wedding Video Highlight -->
+<!-- Wedding Video Invitation -->
+<div class="video-container" style="text-align: center; margin: 30px 0;">
+    <h3 style="
+        font-family: 'Dancing Script', cursive;
+        color: #FF1493;
+        font-size: 28px;
+        margin-bottom: 16px;
+    ">
+        Your Video Invitation Awaits
+    </h3>
+
+    <video
+        controls
+        style="
+            width: 90%;
+            max-width: 600px;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        "
+    >
+        <source src="public/videos/Shrutiparna Sangeet event.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+</div>
+
 
        <!-- Wedding Location Map -->
 <div class="map-container" style="text-align: center; margin-top: 20px;">
@@ -349,6 +397,24 @@
         transition: background-color 0.3s ease, box-shadow 0.3s ease;
         white-space: nowrap; /* Keep buttons contained to text size */
     }
+
+
+.video-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.video-container h3 {
+    font-family: 'Dancing Script', cursive;
+    color: #FF1493;
+}
+
+.video-container video {
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
     
 
     /* Custom button colors */
@@ -359,6 +425,11 @@
     .call {
         background-color: #FF1493;
     }
+
+
+  .details p::before {
+    margin-right: 4px;
+  }
 
     
 
