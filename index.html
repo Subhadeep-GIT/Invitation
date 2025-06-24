@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Shruti Wedding Invitation</title>
     <!-- Favicon -->
-    <link rel="icon" href="public/images/Invitation.png" type="image/png">
+    <link rel="icon" href="public/images/Coverpic.jpg" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     <style>
         /* Global Styles */
@@ -237,8 +237,8 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 16px;
+        gap: 30px;
+        margin-bottom: 30px;
     ">
         <p style="margin: 0;"><strong>📅 Date:</strong> 20th & 21st July 2025</p>
         <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Shrutiparna+%26+Samrat+Wedding+Celebration&dates=20250720T130000Z/20250721T170000Z&details=Sangeet+Night+on+20th+(6:30PM+-+10PM)+and+Wedding+Ceremony+on+21st+(6:30PM+-+10:30PM)&location=Bhanumati+Lodge,+Tulin,+Purulia,+West+Bengal+723212+(https://maps.app.goo.gl/rsifQbRQ7xpx6deP9)" 
@@ -251,7 +251,7 @@
     <p style="margin: 10px 0;"><strong>🎶 20th July:</strong> Sangeet Night — <em>7:00 PM onwards</em></p>
     <p style="margin: 10px 0;"><strong>💍 21st July:</strong> Marriage Ceremony — <em>6:30 PM onwards</em></p>
     <p style="margin: 14px 0 6px;"><strong>🏨 Venue:</strong> Bhanumati Lodge</p>
-    <p style="margin: 6px 0;"><strong>📍 Address:</strong> Tulin, Uhupiri, Dist: Purulia, West Bengal 723212</p>
+    <p style="margin: 6px 0 30px;"><strong>📍 Address:</strong> Tulin, Uhupiri, Dist: Purulia, West Bengal 723212</p>
 </div>
         <!-- Countdown Timer -->
         <div class="countdown-container" style="text-align: center; margin-top: 20px;">
@@ -263,35 +263,32 @@
         </div>
 
         <script>
-            // Set the wedding date
-            var weddingDate = new Date("July 21, 2025 18:00:00").getTime();
+    // Set the wedding date
+    var weddingDate = new Date("July 21, 2025 18:00:00").getTime();
 
-            // Update the countdown every 1 second
-            var countdownFunction = setInterval(function () {
+    // Update the countdown every 1 second
+    var countdownFunction = setInterval(function () {
+        var now = new Date().getTime();
+        var timeLeft = weddingDate - now;
 
-                // Get the current time
-                var now = new Date().getTime();
+        var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-                // Find the time difference
-                var timeLeft = weddingDate - now;
+        // Show countdown
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
 
-                // Time calculations for days, hours, minutes, and seconds
-                var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        // When countdown ends
+        if (timeLeft < 0) {
+            clearInterval(countdownFunction);
 
-                // Display the result
-                document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-                    + minutes + "m " + seconds + "s ";
-
-                // If the countdown is over, display a message
-                if (timeLeft < 0) {
-                    clearInterval(countdownFunction);
-                    document.getElementById("countdown").innerHTML = "The wedding has started!";
-                }
-            }, 1000);
-        </script>
+            // ✨ Custom celebration message
+            document.getElementById("countdown").innerHTML = "🎉 The moment is live! Shrutiparna & Samrat's wedding has begun! 🎉";
+        }
+    }, 1000);
+</script>
 
      
 <!-- Image Carousel -->
@@ -327,7 +324,7 @@
     setInterval(changeImage, 4000); // Change image every 3 seconds
 </script>
 
-<!-- Wedding Video Highlight -->
+
 <!-- Wedding Video Invitation -->
 <div class="video-container" style="text-align: center; margin: 30px 0;">
     <h3 style="
